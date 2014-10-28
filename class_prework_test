@@ -1,0 +1,8 @@
+dog = Pet.new
+dog.speak
+puts "The dog #{dog.do_something("bark")}s."
+dog.set_name("Tex")
+
+robbie = Robot.new
+robbie.kill_humans(3)
+robbie.retrain(3)

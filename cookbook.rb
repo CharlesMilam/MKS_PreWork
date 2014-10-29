@@ -16,6 +16,13 @@ class Cookbook
     puts "New recipe added: #{new_recipe.title}"
   end
   
+  def recipe_titles
+    @recipes.each {|recipe| puts "These are your recipes: #{recipe.title}"}
+  end
+  
+  def recipe_ingredients
+    @recipes.each {|recipe| puts "These are the ingredients for #{recipe.title}: #{recipe.ingredients}"}
+  end
     
 end
   

@@ -13,6 +13,7 @@ class Cookbook
   
   def add_recipe(new_recipe)
     @recipes.push(new_recipe)
+    puts "New recipe added: #{new_recipe.title}"
   end
   
     

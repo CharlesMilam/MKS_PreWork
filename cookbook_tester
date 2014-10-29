@@ -1,0 +1,8 @@
+load "cookbook.rb"
+mex_cuisine = Cookbook.new("Mexican Cooking")
+burrito = Recipe.new("Bean Burrito", ["tortilla", "bean"], ["heat beans", "place beans in tortilla", "roll up"])
+
+puts mex_cuisine.title # Mexican Cooking
+puts burrito.title # Bean Burrito
+p burrito.ingredients # ["tortilla", "bean", "cheese"]
+p burrito.steps # ["heat beans", "heat tortilla", "place beans in tortilla", "sprinkle cheese on top", "roll up"]

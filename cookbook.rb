@@ -3,11 +3,18 @@
 #Milam 102914
 
 class Cookbook
+  attr_reader :recipes
   attr_accessor :title
   
   def initialize(title)
     @title = title
+    @recipes = []
   end
+  
+  def add_recipe(new_recipe)
+    @recipes.push(new_recipe)
+  end
+  
     
 end
   

@@ -14,6 +14,6 @@ burrito.title = "Veggie Burrito"
 burrito.ingredients = ["tortilla", "tomatoes"]
 burrito.steps = ["heat tomatoes", "place tomatoes in tortilla", "roll up"]
 
-p burrito.title # "Veggie Burrito"
+puts burrito.title # Veggie Burrito
 p burrito.ingredients # ["tortilla", "tomatoes"]
 p burrito.steps # ["heat tomatoes", "place tomatoes in tortilla", "roll up"]

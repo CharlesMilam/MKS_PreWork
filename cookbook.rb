@@ -25,17 +25,19 @@ class Cookbook
   end
 
   def print_cookbook
-
-  	# puts
-  	# puts @title
-  	# @title.length.times {print "- "}
-  	# puts
-  	# puts "Ingredients"
-  	# @ingredients.each {|ingredient| puts "  #{ingredient}"}
-  	# puts
-  	# puts "Directions"
-  	# @steps.each {|step| puts "* #{step}" }
-  	# puts
+	@recipes.each do |recipe|
+		step_count = 0
+	  	puts
+	  	puts recipe.title
+	  	recipe.title.length.times {print "- "}
+	  	puts
+	  	puts "Ingredients"
+	  	recipe.ingredients.each {|ingredient| puts "  #{ingredient}"}
+	  	puts
+	  	puts "Directions"
+	  	recipe.steps.each {|step| puts "#{step_count += 1}. #{step}" }
+	  	puts
+  	end
   end
 
 end
@@ -50,6 +52,7 @@ class Recipe
   end
 
   def print_recipe
+  	step_count = 0
   	puts
   	puts @title
   	@title.length.times {print "- "}
@@ -58,7 +61,7 @@ class Recipe
   	@ingredients.each {|ingredient| puts "  #{ingredient}"}
   	puts
   	puts "Directions"
-  	@steps.each {|step| puts "* #{step}" }
+  	@steps.each {|step| puts "#{step_count += 1}. #{step}" }
   	puts
   end
 

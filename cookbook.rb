@@ -24,6 +24,14 @@ class Cookbook
     @recipes.each {|recipe| puts "These are the ingredients for #{recipe.title}: #{recipe.ingredients}"}
   end
 
+  def delete_recipe(recipe)
+  	@recipes.delete_if {|del_recipe, *_| del_recipe.title == recipe}
+  end
+
+  def change_recipe_title(old_title, new_title)
+  	@recipes.each {|recipe, *_|  recipe.title = new_title if recipe.title == old_title}
+  end
+
   def print_cookbook
 	@recipes.each do |recipe|
 		step_count = 0
